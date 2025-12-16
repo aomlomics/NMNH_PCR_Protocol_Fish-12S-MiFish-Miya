@@ -28,8 +28,8 @@ thermocycler: Eppendorf Mastercycler Nexus Thermal Cycler
 amplificationReactionVolume: 25
 assay_name: Fish-12S-MiFish-Miya
 assay_validation: not provided
-targetTaxonomicAssay: 12S rRNA gene sequencing ing the V5-V6 region using primers MiFish-U-R and MiFish-U-R
-TaxonomicScope: fishes
+targetTaxonomicAssay: Actinopterygii
+targetTaxonomicScope: "Also captures non-target: Vertebrates, bacteria"
 target_gene: 12S rRNA (SSU mitochondria)
 target_subfragment: V5-V6
 ampliconSize: 163-185
