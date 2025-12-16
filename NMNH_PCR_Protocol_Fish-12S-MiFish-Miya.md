@@ -1,7 +1,7 @@
 ---
 # MIOP terms
 methodology_category: omics analysis
-project: "NOAA Atlantic Oceanographic and Meteorological Laboratory Omics Program; https://github.com/aomlomics/protocols; https://zenodo.org/communities/aomlomics"
+project: "NOAA Ocean Exploration seawater eDNA metabarcoding"
 purpose: PCR [OBI:0000415]
 analyses: PCR [OBI:0000415]
 geographic_location: Atlantic Ocean [GAZ:00000344], Gulf of Mexico [GAZ:00002853]
@@ -9,7 +9,7 @@ broad_scale_environmental_context: marine biome [ENVO:00000447], marine photic z
 local_environmental_context: marine biome [ENVO:00000447], marine photic zone [ENVO:00000209]
 environmental_medium: sea water [ENVO:00002149]
 target: 12S mitochondrial ribosomal RNA  [NCIT:C128263]
-creator: Luke Thompson
+creator: Steven Auscavitch
 materials_required: vortexer [OBI:0400118], PCR instrument [OBI:0000989], agarose gel electrophoresis system [OBI:0001134]
 skills_required: sterile technique, pipetting skills, standard molecular technique
 time_required: 240
@@ -17,7 +17,7 @@ personnel_required: 1
 language: en
 issued: 2024-08-22
 audience: scientists
-publisher: NOAA Atlantic Oceanographic and Meteorological Laboratory
+publisher: Smithsonian NMNH
 hasVersion: 1
 license: CC0 1.0 Universal
 maturity level: mature
@@ -26,62 +26,64 @@ maturity level: mature
 pcr_0_1: 1
 thermocycler: Eppendorf Mastercycler Nexus Thermal Cycler
 amplificationReactionVolume: 25
-assay_name: ssu12sv5v6_mifish
+assay_name: Fish-12S-MiFish-Miya
 assay_validation: not provided
-targetTaxonomicAssay: 12S rRNA gene sequencing ing the V5-V6 region using primers MiFish-F V2 and MiFish-R
+targetTaxonomicAssay: 12S rRNA gene sequencing ing the V5-V6 region using primers MiFish-U-R and MiFish-U-R
 TaxonomicScope: fishes
-target_gene: 12S rRNA
+target_gene: 12S rRNA (SSU mitochondria)
 target_subfragment: V5-V6
 ampliconSize: 163-185
-pcr_primer_forward: GCCGGTAAAACTCGTGCCAGC
+pcr_primer_forward: GTCGGTAAAACTCGTGCCAGC
 pcr_primer_reverse: CATAGTGGGGTATCTAATCCCAGTTTG
-pcr_primer_name_forward: 12S MiFish_U F Fluidigm V2
-pcr_primer_name_reverse: 12S MiFish_U R Fluidigm
+pcr_primer_name_forward: MiFish-U-F
+pcr_primer_name_reverse: MiFish-U-R
 pcr_primer_reference_forward: http://dx.doi.org/10.1098/rsos.150088
 pcr_primer_reference_reverse: http://dx.doi.org/10.1098/rsos.150088
-pcr_primer_vol_forward: 1.0
-pcr_primer_vol_reverse: 1.0
-pcr_primer_conc_forward: 10
-pcr_primer_conc_reverse: 10
+pcr_primer_vol_forward: not provided
+pcr_primer_vol_reverse: not provided
+pcr_primer_conc_forward: not provided
+pcr_primer_conc_reverse: not provided
 probeReporter: not applicable
 probeQuencher: not applicable
 probe_seq: not applicable
 probe_ref: not applicable
 probe_conc: not applicable
-commercial_mm: AmpliTaq Gold 360 Master Mix
-custom_mm: PCR reactions were run in 25 uL reaction volumes, with 1.0 uL of DNA, 12.5 uL of AmpliTaq Gold, 9.5 uL of water, and 1.0 uL of each primer (10 uM).
-pcr_dna_vol: 1.0
-pcr_rep: 1.0
-nucl_acid_amp: https://www.protocols.io/view/environmental-dna-edna-12s-metabarcoding-illumina-kqdg35kqzv25/v
-pcr_cond: initial denaturation:95_15;touchdown cycling;denaturation:94_0.5;annealing:69.5_0.5;elongation:72_1.5;13;normal cycling;denaturation:94_0.5;annealing:50_0.5;elongation:72_0.75;final elongation:72_10;25
-annealingTemp: 69.5;50
-pcr_cycles: 13;35
+commercial_mm: not provided
+custom_mm: not provided
+pcr_dna_vol: not provided
+pcr_rep: not provided
+nucl_acid_amp: not provided
+pcr_cond: not provided
+annealingTemp: not provided
+pcr_cycles: not provided
 pcr_analysis_software: not provided
 pcr_method_additional: not provided
 barcoding_pcr_appr: two-step PCR
 pcr2_thermocycler: not provided
-pcr2_amplificationReactionVolume: 15
-pcr2_commercial_mm: 2X Dream Taq Master Mix (K1920)
+pcr2_amplificationReactionVolume: not provided
+pcr2_commercial_mm: not provided
 pcr2_custom_mm: not applicable
-pcr2_dna_vol: 1
-pcr2_cond: initial denaturation:95_3;denaturation:95_0.25;annealing:60_0.5;elongation:72_1.5;final elongation:72_3;11
-pcr2_annealingTemp: 60
-pcr2_cycles: 11
+pcr2_dna_vol: not provided
+pcr2_cond: not provided
+pcr2_annealingTemp: not provided
+pcr2_cycles: not provided
 pcr2_analysis_software: not applicable
 pcr2_method_additional: not applicable
-sequencing_location: Michigan State University Research Technology Support Facility Genomics Core
+sequencing_location: not provided
 platform: ILLUMINA
 instrument: Illumina MiSeq [OBI:0002003]
 seq_kit: MiSeq Reagent Kit v2 (500 cycles)
 lib_layout: paired
-adapter_forward: ACACTGACGACATGGTTCTACA
-adapter_reverse: TACGGTAGCAGAGACTTGGTCT
-lib_screen: normalized using Invitrogen SequalPrep
-lib_conc_meth: quantified using Qubit dsDNA HS, Agilent 4200 TapeStation HS DNA1000 and Invitrogen Collibri Library Quantification qPCR
+adapter_forward: not provided
+adapter_reverse: not provided
+lib_screen: not provided
+lib_conc_meth: not provided
 seq_method_additional: not applicable
 ---
 
-# NOAA/AOML PCR Protocol 12S rRNA MiFish (Miya-Wangensteen)
+# NMNH PCR Protocol 12S rRNA MiFish (Miya)
+
+***WARNING: DETAILS BELOW HAVE NOT BEEN UPDATED. PLEASE REFER TO YAML FRONT MATTER ABOVE.***
 
 ## PROTOCOL INFORMATION
 
