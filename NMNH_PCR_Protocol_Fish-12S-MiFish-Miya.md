@@ -12,7 +12,7 @@ target: 12S mitochondrial ribosomal RNA  [NCIT:C128263]
 creator: Steven Auscavitch, Allen Collins
 materials_required: vortexer [OBI:0400118], PCR instrument [OBI:0000989], agarose gel electrophoresis system [OBI:0001134]
 skills_required: sterile technique, pipetting skills, standard molecular technique
-time_required: 240
+time_required: 480
 personnel_required: 1
 language: en
 issued: 2025-12-19
@@ -25,7 +25,7 @@ maturity level: mature
 # FAIRe terms
 pcr_0_1: 1
 thermocycler: Eppendorf Mastercycler Nexus Thermal Cycler
-amplificationReactionVolume: 25
+amplificationReactionVolume: 10
 assay_name: Fish-12S-MiFish-Miya
 assay_validation: not provided
 targetTaxonomicAssay: Actinopterygii
@@ -39,41 +39,39 @@ pcr_primer_name_forward: MiFish-U-F
 pcr_primer_name_reverse: MiFish-U-R
 pcr_primer_reference_forward: http://dx.doi.org/10.1098/rsos.150088
 pcr_primer_reference_reverse: http://dx.doi.org/10.1098/rsos.150088
-pcr_primer_vol_forward: not provided
-pcr_primer_vol_reverse: not provided
-pcr_primer_conc_forward: not provided
-pcr_primer_conc_reverse: not provided
+pcr_primer_vol_forward: 0.3
+pcr_primer_vol_reverse: 0.3
+pcr_primer_conc_forward: 10
+pcr_primer_conc_reverse: 10
 probeReporter: not applicable
 probeQuencher: not applicable
 probe_seq: not applicable
 probe_ref: not applicable
 probe_conc: not applicable
-commercial_mm: not provided
-custom_mm: not provided
-pcr_dna_vol: not provided
-pcr_rep: not provided
+commercial_mm: 2X KAPA HiFi Master Mix
+custom_mm: not applicable
+pcr_dna_vol: 1
+pcr_rep: 3
 nucl_acid_amp: not provided
-pcr_cond: not provided
-annealingTemp: not provided
-pcr_cycles: not provided
+pcr_cond: initialdenaturation:95_3;denaturation:98_0.33;annealing:64_0.25;elongation:72_0.5;final elongation:72_1;35
+annealingTemp: 64
+pcr_cycles: 35
 pcr_analysis_software: not provided
 pcr_method_additional: not provided
 barcoding_pcr_appr: two-step PCR
 pcr2_thermocycler: not provided
-pcr2_amplificationReactionVolume: not provided
-pcr2_commercial_mm: not provided
+pcr2_amplificationReactionVolume: 25
+pcr2_commercial_mm: 2X KAPA HiFi Master Mix
 pcr2_custom_mm: not applicable
-pcr2_dna_vol: not provided
-pcr2_cond: not provided
-pcr2_annealingTemp: not provided
-pcr2_cycles: not provided
-pcr2_analysis_software: not applicable
-pcr2_method_additional: not applicable
+pcr2_dna_vol: 2
+pcr2_cond: initialdenaturation:95_3;denaturation:98_0.5;annealing:65_0.25;elongation:72_0.5;final elongation:72_1;5-8
+pcr2_annealingTemp: 65
+pcr2_cycles: 5-8
+pcr2_analysis_software: not provided
+pcr2_method_additional: not provided
 ---
 
 # NMNH PCR Protocol 12S rRNA MiFish (Miya)
-
-***WARNING: DETAILS BELOW HAVE NOT BEEN UPDATED. PLEASE REFER TO YAML FRONT MATTER ABOVE.***
 
 ## PROTOCOL INFORMATION
 
@@ -92,8 +90,9 @@ pcr2_method_additional: not applicable
 
 | PREPARED BY | AFFILIATION | ORCID | DATE |
 | ------------- | ------------- | ------------- | ------------- |
-| Allen Collins | Smithsonian NMNH | <https://orcid.org/0000-0002-3664-9691> | missing |
-| Steven Auscavitch | Smithsonian NMNH |  <https://orcid.org/0000-0001-5777-4814> | missing |
+| Katie Murphy | Smithsonian NMNH | not provided | 2023-02-10 |
+| Allen Collins | Smithsonian NMNH | <https://orcid.org/0000-0002-3664-9691> | not provided |
+| Steven Auscavitch | Smithsonian NMNH |  <https://orcid.org/0000-0001-5777-4814> | not provided |
 | Luke Thompson | NOAA/AOML, MSU/NGI | <https://orcid.org/0000-0002-3911-1280> | 2025-12-19 |
 | Sammy Harding | NOAA/AOML, MSU/NGI | <https://orcid.org/0009-0008-8885-6140> | 2025-12-19 |
 
@@ -109,13 +108,14 @@ pcr2_method_additional: not applicable
 
 | PROTOCOL NAME | LINK | ISSUER / AUTHOR | ACCESS DATE |
 | ------------ | ------------ | ------------ | ---------- |
-| Missing |
+| Invitrogen Qubit 1X dsDNA HS Assay Kits User Guide | https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0017455_Qubit_1X_dsDNA_HS_Assay_Kit_UG.pdf | ThermoFisher Scientific | 2026-01-05 |
 
 ### Protocol Revision Record
 
 | VERSION | RELEASE DATE | DESCRIPTION OF REVISIONS |
 | ------------- | ------------- | ------------- |
 | 1.0.0 | 2025-12-19 | Initial release |
+| 1.1.0 | 2026-01-05 | Updated protocol with NMNH PCR protocol details |
 
 ### Acronyms and Abbreviations
 
@@ -142,15 +142,15 @@ pcr2_method_additional: not applicable
 
 ### Summary
 
-This protocol describes steps for performing PCR for [12S rRNA](target_gene) [V5-V6](target_subfragment) marker gene regions of seawater eDNA samples at the National Museum of Natural History (NMNH).
+The 12S metabarcoding protocol detailed here is designed to prepare 12S fragments for sequencing on Illumina platforms using a two-step amplification process. This protocol was created and is used by the Smithsonian Institution, National Museum of Natural History.
 
 ### Method description and rationale
 
-This protocol is used for PCR amplifying the 12S MiFish marker gene regions of environmental DNA.
+The first step (amplification PCR) will amplify your region of interest and add an iTru tail. This tail acts as a priming site for the second step (indexing PCR) that will add indices and the Illumina-required adapter to your product. The resulting libraries are dual-indexed and can be sequenced on any Illumina sequencer.
 
 ### Spatial coverage and environment(s) of relevance
 
-This protocol can be used to amplify the 12S marker gene region of any eDNA sample.
+This protocol is designed such that it can be modified for any organism or gene by using custom primers in place of the 12S primers for the amplification PCR, as long as the primers also contain the appropriate iTru Tail. To modify, replace the 12S forward and 12S reverse portions of the primer (in the case below, MiFish_U_F and MiFish_U_R, respectively) with your specific forward and reverse primers. The indexing primers will remain the same regardless of your study, so you will not need to modify these. 
 
 ## PERSONNEL REQUIRED
 
@@ -162,11 +162,11 @@ There are no hazardous chemicals or materials involved in this protocol. Standar
 
 ### Training requirements
 
-Basic molecular biology training is sufficient for this protocol including sterile technique, pipetting small volumes and programming/running [PCR](purpose) thermal cyclers.
+Basic molecular biology training is sufficient for this protocol including sterile technique, pipetting small volumes and programming/running PCR thermal cyclers.
 
 ### Time needed to execute the procedure
 
-Protocol takes about 4 hours ([240](time_required) minutes) including thermal cycler run time.
+Protocol takes about 8 hours including thermal cycler run time.
 
 ## EQUIPMENT
 
@@ -184,15 +184,20 @@ For 96-well Plate:
 | **Consumable equipment** |
 | Gloves | Nitrile Gloves, Exam Grade, Powder-free | ULINE | 1 | (box) Can be substituted with generic |
 | Kim Wipes | KimWipe Delicate Task Wipers | KimTech | 1 | (box) Can be substituted with generic |
-| 96-well PCR Plate | | Armadillo PCR Plate, 96-well, clear, clear wells | ThermoFisher | 3 | |
+| 96-well PCR Plate | Armadillo PCR Plate, 96-well, clear, clear wells | ThermoFisher | 3 | |
 | PCR Plate Seal | AlumaSeal II Sealing Foils for PCR and Cold Storage | VWR | 2 | Can be substituted with generic, can use tightly-fitted strip caps in place of seal |
 | 1000µL Filter Tips | OT-2 Filter Tips, 1000µL | Opentrons | 1 | (box) Can be substituted with generic |
 | 200µL Filter Tips | OT-2 Filter Tips, 200µL | Opentrons | 2 | (boxes) Can be substituted with generic |
 | 10 ul Filter tips | TipOne Pipette Tips, 10 uL | TipOne | 2 | (boxes) Can be substituted with generic |
-| (missing) PCR Mix | (missing) | (missing)| 1.2 | (mL) |
+| 2X KAPA HiFi Master Mix | 2X KAPA HiFi Master Mix | Roche | 1.2 | (mL) |
 | Molecular water | Invitrogen RT-PCR Grade Water | Fisher Scientific | 0.912 | (mL) |
 | Forward Primer - 12S MiFish-U-F| 12S MiFish-U-F | IDT | 105 | (ul (10uM)) Primer must be diluted from 100uM stocks to 10uM |
 | Reverse Primer - 12S MiFish-U-R | 12S MiFish-U-R | IDT | 105 | (ul (10uM)) Primer must be diluted from 100uM stocks to 10uM |
+| iTru-tailed locus-specific primers | iTru-tailed locus-specific primers |  |  |  |
+| Indexing primers (i5 & i7) | Indexing primers (i5 & i7) |  |  |  |
+| KAPA Pure Beads | KAPA Pure Beads | Roche |  |  |
+| Qubit Reagents | Qubit dsDNA Quantification Assay Kit | Invitrogen | 1 | (kit) |
+| Clear Qubit Assay tubes | 0.5 mL thin-walled, polypropylene tubes | Invitrogen | 98 | Must be correct tubes to allow for fluorometer to read concentration |
 | **Chemicals** |
 | RNase AWAY | RNase AWAY Surface Decontaminant | ThermoFisher Scientific | 1 | (bottle) Used to sterilize lab surfaces and equipment |
 | EtOH | Ethanol | Generic Brand | 1 | (wash bottle) Must be molecular grade ethanol |
@@ -208,51 +213,233 @@ For 96-well Plate:
 
 ### Protocol
 
-#### Preparation
+#### Step 1 – Quantification of DNA
+Step 1 is not always mandatory, especially if you are amplifying a large number of samples for barcoding (instead of metabarcoding). However, not quantifying may affect amplification success and product concentration.
 
-1. Dilute primers from 100 uM to 10 uM if not already at 10uM.
-2. Set up PCR under hood by wiping off all surfaces, pipettes, and racks with RNase AWAY and UV sterilizing for 5-10 mins.
-3. Map out order of samples on 96-well PCR plate. Make sure to leave a space for a no template control (NTC) and positive control.
+  1. Quantify your DNA sample(s) using QuBit or Quant-iT.
 
-#### PCR
+#### Step 2 – 12S PCR 
+This protocol describes the use of triplicate reactions. Please note that your project may require more replicates than this; we strongly suggest you review recent literature when planning your project.
 
-1. Make PCR master mix by adding (missing) ul of the following to each well of PCR plate:
+  1. Retrieve reagents from the freezer and allow them to thaw at room temperature. Vortex and spin down.
 
-- (missing) ul (missing Master Mix name)
-- (missing) ul molecular water
-- (missing) ul Fwd primer (10 μM) - 12S MiFish-U-F
-- (missing) ul Rev primer (10 μM) - 12S MiFish-U-R
+  2. Perform the initial PCR in triplicate using 10 µL reactions. Follow the recipe below to make your master mix (scale up accordingly). Volumes are given in µL. Mix thoroughly, then spin briefly. 
 
-| PCR Primer Name | Direction | Sequence (5’ -> 3’) |
+| Component | Per Reaction (uL) | Final Concentration |
+| ----- | ----- | ----- |
+| Nuclease-free water | 3.4 | not applicable |
+| 2X KAPA HiFi master mix | 5.0 | 1X |
+| 12S MiFish-U-F with tail (10 μM) | 0.3 | 0.3 μM |
+| 12S MiFish-U-R with tail (10 μM) | 0.3 | 0.3 μM |
+| Template DNA | 1.0 | varies |
+
+| PCR Primer Name | Direction | Sequence (5’ -> 3’) | Sequence with iTru tails |
 | ----- | ----- | ----- |----|----|
-| 12S MiFish-U-F | forward | GTCGGTAAAACTCGTGCCAGC |
-| 12S MiFish-U-R | reverse | CATAGTGGGGTATCTAATCCCAGTTTG |
+| 12S MiFish-U-F_iTru_HS | forward | GTCGGTAAAACTCGTGCCAGC | ACACTCTTTCCCTACACGACGCTCTTCCGATCT xxx GTCGGTAAAACTCGTGCCAGC |
+| 12S MiFish-U-R_iTru_HS | reverse | CATAGTGGGGTATCTAATCCCAGTTTG | GTGACTGGAGTTCAGACGTGTGCTCTTCCGATCT xxx CATAGTGGGGTATCTAATCCCAGTTTG |
 
-2. Add (missing) ul of sample DNA (or molecular water for NTC) to respective triplicate wells for a total reaction volume of (missing) ul per well. Pipette up and down or vortex to fully distribute DNA into master mix.
-3. Seal plate with PCR plate seal or strip caps.
-4. Load plate onto thermal cycler and select (missing) program to run the following steps:
+  3. Aliquot 9.0 µL of master mix into each PCR tube, then add 1.0 µL of template DNA. Cover plate with a silicone mat, then spin to collect liquid to the bottom of wells.
+
+  4. Place tubes/plate into a thermocycler and run the following program:
 
 | PCR step | Temperature | Duration | Repetition |
 | ----- | ----- | ----- | ----- |
-| Initial Denaturation | 95°C | 15min | 1x |
-| Denaturation | (missing) | (missing) | (missing) |
-| Annealing | (missing) | (missing) | (missing) |
-| Extension | (missing) | (missing) | (missing) |
-| Final Extension | 72°C | 10min | 1x |
-| Hold | 4°C | ∞ | |
+| Initial Denaturation | 95°C | 3min | 1x |
+| Denaturation | 98°C | 20s | 35x |
+| Annealing | 64°C | 15s | 35x |
+| Extension | 72°C | 30s | 35x |
+| Final Extension | 72°C | 1min | 1x |
+| Hold | 12°C | ∞ | |
+
+  5. After the PCR finishes, go directly to Step 3, or samples may be stored at 4°C for up to 3 days (or at 20°C for longer periods).
+
+#### Step 3 – Gel verification & Pooling
+  1. Prepare a 1.5% agarose gel.
+
+  2. Mix 2 µl PCR product from Step 2 with 2 µl 2X loading dye/10X GelRed. Run gels for 6 minutes at 125V.
+
+  3. Product size should be 275–321 bp for MiFish 12S primers with heterogeneity spacers.
+
+  4. Pool PCR replicates for each sample, omitting any that had incorrect bands present.
+
+  5. Go directly to Step 4, or samples may be stored at 4°C for up to 3 days (or at -20°C for longer periods). 
+
+#### Step 4 – PCR Cleanup with KAPA Pure Beads
+Clean up your 12S PCR products using either 1.5X KAPA Pure beads
+If you have less than 24 uL per sample, please scale the amount of beads accordingly. If you are using a different locus, you may need to adjust the bead ratio based on your amplicon size.
+
+  1. Remove KAPA Pure beads from the fridge and allow to come to room temperature. While you wait, make fresh 80% Ethanol (you need 450 µl per sample).
+
+  2. Vortex the beads until fully resuspended (~30 seconds).
+
+  3. To 24 µL of PCR product, add 36 µL of KAPA Pure beads (1.5X bead-to-sample ratio).
+
+  4. Mix thoroughly by pipetting up/down at least 10 times.
+
+  5. Incubate at room temperature for 5 minutes to bind the DNA to the beads.
+
+  6. Place the plate/tubes on a magnet for ~3 minutes, or until the supernatant is clear and beads are pelleted.
+
+  7. Carefully remove and discard the supernatant, making sure to not disturb the pellet.
+
+  8. With the plate/tubes still on the magnet, wash the beads by adding 200µL of 80% ethanol. Do not mix.
+
+  9. Incubate at room temp for 30 seconds.
+
+  10. Remove and discard the supernatant.
+
+  11. Repeat the ethanol wash (steps 8-10).
+
+  12. Carefully remove any residual ethanol using a P20 pipette.
+
+  13. Allow beads to air dry for 3 to 5 minutes (not longer!).
+
+  14. Remove the plate from the magnet. Add 22 µL of 10 mM Tris-HCl (pH 8.0) (or TLE: 10 mM Tris-HCl, 0.1 mM EDTA) to each well and use a pipette to fully resuspend the beads.
+
+  15. Incubate the plate at room temperature for 5 minutes.
+
+  16. Place the plate back on the magnet for ~3 minutes, or until the supernatant clears.
+
+  17. Carefully transfer 20 µL of the clear supernatant to a new plate/tube, making sure to not disturb the bead pellet.
+
+  18. After the cleanup, go directly to Step 5, or samples may be stored at 4°C for up to 3 days (or at -20°C for longer periods). 
+
+#### Step 5 – Indexing PCR
+  1. Determine which indices will be used for which samples; make sure to record these exactly. Each sample needs an i7 and an i5. a. Make sure you use the indices that match the tails on your locus-specific primers (eg. iTru indices w/ iTru-tailed locus primers).
+
+  2. Thaw the 2X KAPA HiFi master mix and indexing primers. Once thawed, briefly vortex the master mix. Invert the indexing primers ~10 times to mix. Spin briefly.
+
+  3. Set up the following 25 µL PCR reactions.
+     a. Remember, your indices are sample-specific, so do NOT include them in your master mix if you choose to make one. 
+
+| Component | Per Reaction (uL) | Final Concentration |
+| ----- | ----- | ----- |
+| Nuclease-free water | 9.0 | not applicable |
+| 2X KAPA HiFi master mix | 12.5 | 1X |
+| i7 index (10 μM) | 0.75 | 0.3 μM |
+| i5 index (10 μM) | 0.75 | 0.3 μM |
+| Template (12S tailored product) | 2.0 | varies |
+
+  4. If using a reaction mix (that includes everything except indices and DNA), pipette 21.5 µL of master mix into each well of your plate (or tubes).
+
+  5. Add 0.75 µL of the required i5 primer (S5xx or i5xx) to each well. Next, add 0.75 µL of the required i7 primer (N7xx or i7xx) to each well.
+
+  6. Lastly, add 2 µL of your template DNA (12S PCR product).
+    a. Your total reaction volume in each well should be 25 µL.
+
+  7. Using a P20 or P200 pipette, set to ~15 µL, mix up/down 5 times. Avoid making bubbles.
+
+  8. Seal the plate with a silicone mat or plate seal and spin briefly to collect liquid at the bottom of the wells. 
+
+  9. Place the plate (or tubes) into a thermocycler and run the following indexing program with 5-8 cycles:
+
+| PCR step | Temperature | Duration | Repetition |
+| ----- | ----- | ----- | ----- |
+| Initial Denaturation | 95°C | 3min | 1x |
+| Denaturation | 98°C | 30s | 5-8x |
+| Annealing | 65°C | 15s | 5-8x |
+| Extension | 72°C | 30s | 5-8x |
+| Final Extension | 72°C | 1min | 1x |
+| Hold | 12°C | ∞ | |
+
+  10. After the PCR finishes, go directly to Step 6, or samples may be stored at 4°C for up to 3 days (or at 20°C for longer periods).
+
+#### Step 6 – Gel verification
+  1. Prepare a 1.5% agarose gel.
+
+  2. Mix 2 µl PCR product from Step 6 with 2 µl 2X loading dye/10X GelRed. Run gels for 6 minutes at 125V.
+
+  3. Product size should be 344-384 bp for correctly indexed libraries. A second band at ~275-305 bp indicates that not all of your 12S PCR product was indexed. 
+
+#### Step 7 – PCR Cleanup
+Clean up your PCR products using KAPA Pure beads. If you have less than 23 uL per sample, please scale the amount of beads accordingly.
+
+  1. Remove KAPA Pure beads from the fridge and allow to come to room temperature. While you wait, make fresh 80% Ethanol (450 µl per sample).
+
+  2. Vortex the beads until fully resuspended (~30 seconds).
+
+  3. In your indexing PCR plate, add 18 µl of KAPA Pure beads to the ~23 µL of PCR product. This represents a ~0.8X bead-to-sample ratio.
+    a. This ratio is dependent upon the size of the product. You can use less for larger products (refer to KAPA Pure manual).
+
+  4. Mix thoroughly by pipetting at least 10 times, until the mixture is homogenous.
+
+  5. Incubate at room temperature for 5 minutes to bind the DNA to the beads.
+
+  6. Place the plate/tubes on a magnet for ~3 minutes, or until the supernatant is clear and beads are pelleted.
+
+  7. Carefully remove and discard the supernatant, making sure to not disturb the pellet.
+
+  8. With the plate/tubes still on the magnet, wash the beads by adding 200 µL of 80% ethanol. Do not mix.
+
+  9. Incubate at room temp for 30 seconds.
+  
+  10. Remove and discard the supernatant.
+
+  11. Repeat the ethanol wash (steps 8-10).
+
+  12. Carefully remove any residual ethanol using a P20 pipette. Let the plate dry on the magnet for 3-5 minutes.
+
+  13. Remove the plate from the magnet. Add 22 µL of 10 mM Tris-HCl (pH 8.0) (or TLE: 10 mM Tris-HCl, 0.1 mM EDTA) to each well and use a pipette to fully resuspend the beads.
+
+  14. Incubate the plate at room temperature for 5 minutes.
+
+  15. Place the plate back on the magnet for ~3 minutes, or until the supernatant clears.
+
+  16. Carefully transfer 20 µL of the clear supernatant to a new plate/tube.
+
+  17. After the cleanup, go directly to Step 8, or samples may be stored at 4°C for up to 3 days (or at -20°C for longer periods). 
+
+#### Step 8 – Library Quantification & Pooling
+  1. Quantify your libraries using the Qubit or Quant-iT HS dsDNA assay kit, following manufacturer’s instructions.
+
+  2. Pool each library to be sequenced in equal ng or equimolar amounts in a new 1.5 mL tube:
+    a. If you are using a single gene and all samples will be approximately the same size (such as with 12S or COI), you can pool using ng.
+    b. If you are using multiple amplicons that vary in size, you should instead pool in equimolar amounts. 
+
+#### Step 9 – Final Pool QC
+  1. Use HS dsDNA Qubit or Quant-iT to measure the concentration (ng/µL) of your library pool.
+
+  2. Determine the molarity (nM) of your pool using the equation given in the “Additional Information” section of this guide.
+
+  3. Run a 1:10 dilution of your pool on a HS D1000 tape or on the Bioanalyzer, to ensure the product is the correct size and no adapter-dimer is present.
+    a. Alternatively, you can run 2 uL of your undiluted pool on a 1.5% agarose gel with an appropriate ladder. However, this will not be as sensitive as the Tapestation or Bioanalyzer.
+
+  4. Your pool should be stored at -20°C until submitted for sequencing. 
+
+#### Additional Information
+If you need to convert from ng/ul to nM, use the following equation:
+
+$$
+\frac{\text{concentration (ng/µL)}}{660 \,\text{g/mol} \times \text{average library size (bp)}} \times 10^{6}
+= \text{concentration (nM)}
+$$
 
 #### Quality Control
 
-(missing)
+An initial quantification of DNA is performed to ensure product concentration and amplification success. PCR triplicates are used to reduce PCR bias and increase reliability. Initial PCR products are verified using gel electrophoresis followed by a cleanup step. PCR products are indexed and once again verified using gel electrophoresis followed by another cleanup step. Libraries are quantified and pooled. The final pool is quantified and stored at -20°C. 
 
 ### Basic troubleshooting guide
 
-(missing)
+Please note, if you use alternative locus-specific primers that include inosines, you must use Taq (such as GoTaq) instead of a high fidelity, proof-reading DNA polymerase. If your primers do not contain inosine, then we recommend using a high fidelity enzyme. Based on our experience, we now recommend using KAPA HiFi over NEB Q5, as KAPA HiFi has shown more consistent amplification. Please make sure to adjust thermocycler conditions accordingly.  
+
+For running these libraries on the MiSeq, we recommend spiking 20% PhiX into your pool due to the low complexity of amplicons, assuming your primers did not include heterogeneity spacers. If your locus-specific primers include heterogeneity spacers, then the PhiX spike-in can be decreased to 1%. 
 
 ## REFERENCES
 
-(missing)
+Glenn, T. C., R. Nilsen, T. J. Kieran, J. W. Finger Jr., T. W. Pierson, K. E. Bentley, S. L. Hoffberg, S. Louha, F. J. Garcia-De Leon, M. A. D. R. Portilla, K. D. Reed, J. L. Anderson, J. K. Meece, S. E. Aggrey, R. Rekaya, M. Alabady, M. Belanger, K. Winker, and B. C. Faircloth. Adapterama I: Universal stubs and primers for thousands of dual-indexed Illumina libraries (iTru & iNext). Preprint at http://biorxiv.org/content/early/2016/06/15/049114
+
+Glenn TC, Pierson TW, Bayona-Vásquez NJ, Kieran TJ, Hoffberg SL, Thomas IV JC, Lefever DE, Finger JW, Gao B, Bian X, Louha S, Kolli RT, Bentley KE, Rushmore J, Wong K, Shaw TI, Rothrock Jr MJ, McKee AM, Guo TL, Mauricio R, Molina M, Cummings BS, Lash LH, Lu K, Gilbert GS, Hubbell SP, Faircloth BC. 2019. Adapterama II: universal amplicon sequencing on Illumina plat- forms (TaggiMatrix). PeerJ 7:e7786 http://doi.org/10.7717/peerj.7786.
+
+Miya, M., Y. Sato, T. Fukunaga, T. Sado, J.Y. Poulson, K. Sato, T. Minamoto, S. Yamamoto, H. Yamanaka, H. Araki, M. Kondoh, W. Iwasaki. (2015). MiFish, a set of universal PCR primers for metabarcoding environmental DNA from fishes: detection of more than 230 subtropical marine species. Royal Society Open Science, 2: 150088.
+
+Bell, J. (2011). Overview of tailed amplicon sequencing approach with MiSeq. Illumina.
+
+KAPA Pure Beads technical data sheet, KR1245 – v3.16. July 2016. 6. Herbold, C.W. et al. (2015). A flexible and economical barcoding approach for highly multiplexed amplicon sequencing of diverse target genes. Front Microbiol. https://doi.org/10.3389/fmicb.2015.00731
+
+16S Metagenomic sequencing library preparation. Illumina part # 15044223 Rev. A.
+
+Smithsonian Global ARMS Program – 18S Metabarcoding protocol. 
 
 ## APPENDIX A: DATASHEETS
 
-(missing)
+Not applicable
