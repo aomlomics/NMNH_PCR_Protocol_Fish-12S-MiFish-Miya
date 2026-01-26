@@ -96,19 +96,26 @@ pcr2_method_additional: not provided
 | Luke Thompson | NOAA/AOML, MSU/NGI | <https://orcid.org/0000-0002-3911-1280> | 2025-12-19 |
 | Sammy Harding | NOAA/AOML, MSU/NGI | <https://orcid.org/0009-0008-8885-6140> | 2025-12-19 |
 
-## RELATED PROTOCOLS
+### Related Protocols
 
-| PROTOCOL NAME | LINK  | VERSION | RELEASE DATE |
-| ------------- | ------------- | ------------- | ------------- |
-| NMNH DNA Extraction Protocol using Phenol-Chloroform and Isopropanol | <https://github.com/aomlomics/NMNH_DNA_Extraction_Protocol_Phenol-Chloroform/blob/main/NMNH_DNA_Extraction_Protocol_Phenol-Chloroform.md> | 1.0.2 | 2025-12-15 |
-| NMNH PCR Protocol 18S rRNA V4 (Stoeck-Piredda) | <https://github.com/aomlomics/NMNH_PCR_Protocol_Eukarya-18S-V4-Stoeck-Piredda/blob/main/NMNH_PCR_Protocol_Eukarya-18S-V4-Stoeck-Piredda.md#nmnh-pcr-protocol-18s-rrna-v4-stoeck-piredda> | 1.0.1 | 2025-12-15 |
-| NMNH PCR Protocol COI (Leray-Geller) | <https://github.com/aomlomics/NMNH_PCR_Protocol_Metazoa-COI-Leray-Geller/blob/main/NMNH_PCR_Protocol_Metazoa-COI-Leray-Geller.md> | 1.0.1 | 2025-12-15 |
+- This section contains protocols that should be known to users of this protocol.
+- Internal Protocols: Derivative or altered protocols, or other protocols in this workflow.
+- External Protocols: Protcols from manufacturers or other groups. 
+- Include the link to each protocol.
+- Include the version number (internal) or access date (external) of the protocol when it was accessed.
 
-## RELATED EXTERNAL PROTOCOLS
+#### Internal Protocols
+
+| PROTOCOL NAME | LINK         | VERSION      | RELEASE DATE | INTERNAL/EXTERNAL |
+| ------------- | ------------ | ------------ | ------------ | ----------------- |
+| AOML 'Omics Protocols | https://github.com/aomlomics/protocols | not applicable | ongoing |
+
+#### External Protocols
 
 | PROTOCOL NAME | LINK | ISSUER / AUTHOR | ACCESS DATE |
 | ------------ | ------------ | ------------ | ---------- |
-| Invitrogen Qubit 1X dsDNA HS Assay Kits User Guide | https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0017455_Qubit_1X_dsDNA_HS_Assay_Kit_UG.pdf | ThermoFisher Scientific | 2026-01-05 |
+| Qubit™ dsDNA HS Assay Kit | https://documents.thermofisher.com/TFS-Assets/LSG/manuals/Qubit_dsDNA_HS_Assay_UG.pdf | Thermo Fisher Scientific | 2026-01-26 |
+| KAPA Pure Beads Manual | https://rochesequencingstore.com/wp-content/uploads/2022/07/KAPA-Pure-Beads-Technical-Data-Sheet.pdf | Roche | 2026-01-26 |
 
 ### Protocol Revision Record
 
